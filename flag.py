@@ -16,14 +16,12 @@ except FileNotFoundError:
     sys.exit()
 
 flag_content = []
-alphabets = string.ascii_uppercase
-decimals = string.digits
 
 for data in list:
     if data in range(26):
-        flag_content.append(alphabets[data])
+        flag_content.append(string.ascii_uppercase[data])
     elif data in range(26,36):
-        flag_content.append(decimals[data - 26])
+        flag_content.append(string.digits[data - 26])
     else:
         flag_content.append('_')
 
